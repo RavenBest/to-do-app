@@ -3,7 +3,7 @@ function onReady() {
   const NEW_TODO_TEXT = document.getElementById('newToDoText');
   const TODO_LIST = document.getElementById('toDoList');
 
-  ADD_TODO_FORM.addEventListener('submit', event => {
+  ADD_TODO_FORM.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // get the text
