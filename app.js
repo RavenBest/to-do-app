@@ -4,6 +4,8 @@ function onReady() {
 
   function renderTheUI(){
     const TODO_LIST = document.getElementById('toDoList');
+    TODO_LIST.textContent = '';
+    
       toDos.forEach(function(toDo){
         const NEW_LI = document.createElement('li');
         const CHECKBOX = document.createElement('input');
@@ -17,6 +19,7 @@ function onReady() {
 
   function createNewToDo(){
     const NEW_TODO_TEXT = document.getElementById('newToDoText');
+    if(!NEW_TODO_TEXT.value){ return; }
     toDos.push({
       title: NEW_TODO_TEXT.value,
       complete: false
